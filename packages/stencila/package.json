@@ -1,0 +1,28 @@
+{
+  "name": "texture-plugin-stencila",
+  "version": "0.1.0",
+  "description": "Texture Plugin that enables dynamic code evaluation with Stencila.",
+  "main": "build/texture-plugin-stencila.cjs.js",
+  "jsnext:main": "index.es.js",
+  "scripts": {
+  },
+  "keywords": [
+    "stencila",
+    "reproducibility",
+    "data",
+    "science",
+    "documents",
+    "sheets"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "acorn": "^4.0.11",
+    "astring": "^1.0.5",
+    "plotly.js": "^1.31.1",
+    "stencila-libcore": "^0.2.13",
+    "stencila-mini": "^0.14.2"
+  },
+  "devDependencies": {
+  }
+}
