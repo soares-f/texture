@@ -1,13 +1,10 @@
 import { forEach } from 'substance'
-import ArticleConfigurator from './ArticleConfigurator'
-import ArticleModelPackage from './ArticleModelPackage'
 import ArticleSession from './ArticleSession'
 import JATSImporter from './converter/JATSImporter'
 
 export default {
-  load (xml) {
-    let configurator = new ArticleConfigurator()
-    configurator.import(ArticleModelPackage)
+  load (xml, config) {
+    let articleConfig = config.getConfiguration('article')
     let jatsImporter = new JATSImporter()
     let importOptions = {
       allowNotImplemented: true
@@ -20,7 +17,7 @@ export default {
       throw err
     }
     let doc = result.doc
-    return new ArticleSession(doc, configurator)
+    return new ArticleSession(doc, articleConfig)
   }
 }
 
